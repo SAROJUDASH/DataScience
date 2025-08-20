@@ -237,3 +237,33 @@ elif num_2 > num_1 and num_2 > num_3:
 else:
     print(f"{num_3} is the greatest number.")
 
+
+
+
+#Task 12: Create a fully functional calculator system using loop
+while True:
+    choice = int(input("Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, 5 for modulus, 6 for exit:"))
+    if choice == 6:
+        print("Exiting......")
+        break
+    num1 = int(input("Enter first number:"))
+    num2 = int(input("Enter first number:"))
+    match choice:
+        case 1:
+            print("Sum:", num1 + num2)
+        case 2:
+            print("Difference:", num1 - num2)
+        case 3:
+            print("Multiplication:", num1 * num2)
+        case 4:
+            print("Division:", num1 / num2)
+        case 5:
+            print("Modulus:", num1 % num2)
+        case "_":
+            print("Invalid input")
+
+print("Thank you for using system")
+
+
+
+
