@@ -148,3 +148,92 @@ print(name[-3])
 #g. negative index with step
 print(name[-1:-4:-1])
 print(name[-3:-1:1])
+
+#Task 8: Create a list of usernames input a username from the user check if the username is present in the list or not
+usernames = ["Saroj", "Roman", "Samir", "Santosh","Bibek"]
+user = input("Enter a username:")
+if user in usernames:
+    print("Username found in the list")
+else:
+    print("Username not found in the list")
+
+
+#Task 9: Create a dictionary of usernames and passwords, extract all the usernames from the dictionary 
+#and input username from the user and check if the username is present in the extracted list of usernames.
+info = {
+    "saroj" : "Sar123",
+    "sunil" : "S12unil",
+    "roman" : "r012an",
+    "samir" : "saa45mir",
+    "surya" : "s98urya32"
+}
+usernames = list(info.keys())
+print(usernames)
+
+user = input("Enter a username:")
+if user in usernames:
+    print("Username present in the dictionary.")
+else:
+    print("Username not present in the dictionary.")
+
+
+
+# Task 10: Create a simple calculator system using Elif
+num_1 = float(input("Enter first number:"))
+num_2 = float(input("Enter second number:"))
+oper = input("Enter operation (+, -, *, /,%): ")
+if oper == "+":
+    print("Result", num_1 + num_2)
+elif oper =="-":
+    print("Result", num_1 - num_2)
+elif oper =="*":
+    print("Result", num_1 * num_2)
+elif oper =="/":
+    print("Result", num_1 / num_2)
+elif oper =="%":
+    print("Result", num_1 % num_2)
+else:
+    print("Invalid operation")
+
+
+
+#Task 11:Make a complete register and login system using dictationary
+
+credentials = {
+    "saroj" : "Saroj123"
+}
+
+choice = input("Enter 1 for Register, 2 for login:")
+
+if choice == "1":
+    username = input("Enter a username:")
+    if username in credentials:
+        print("Username already exists.")
+    else:
+        password = input("Enter a password:")
+        credentials.update({username : password})
+        print("Registration successfull.")
+elif choice == "2":
+    username = input("Enter a username:")
+    password = input("Enter a password:")
+    if username in credentials and credentials.get(username) == password:
+        print("Login Successfully.")
+    else:
+        print("Login failed.")
+
+else:
+    print("Invalid choice.")
+            
+
+#Task 11:WAP to find the greatest number among three number, number is given by user
+num_1 = float(input("Enter first number:"))
+num_2 = float(input("Enter second number:"))
+num_3 = float(input("Enter third number:"))
+
+if num_1 > num_2 and num_1 > num_3:
+    print(f"{num_1} is the greatest number.")
+elif num_2 > num_1 and num_2 > num_3:
+    print(f"{num_2} is the greatest number.")
+else:
+    print(f"{num_3} is the greatest number.")
+
